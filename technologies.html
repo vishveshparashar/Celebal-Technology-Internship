@@ -12,327 +12,388 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
-    <style>
-        body {
-          font-family: "Lato", sans-serif;
-        }
-        
-        .sidenav {
-          height: 100%;
-          width: 0;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          background-color: #111;
-          overflow-x: hidden;
-          transition: 0.5s;
-          padding-top: 60px;
-        }
-        
-        .sidenav a {
-          padding: 8px 8px 8px 32px;
-          text-decoration: none;
-          font-size: 25px;
-          color: #818181;
-          display: block;
-          transition: 0.3s;
-        }
-        
-        .sidenav a:hover {
-          color: #f1f1f1;
-        }
-        
-        .sidenav .closebtn {
-          position: absolute;
-          top: 0;
-          right: 25px;
-          font-size: 36px;
-          margin-left: 50px;
-        }
-        
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-        }
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
 
-        * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #fcf9f9;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 6.9s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-</style>
-
-
-        </style>
-        
-    </head>
-        <body>
-
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <li><a href="./index.html" target="_blank">About</a></li>
-        
-        <li><a href="./startbootstrap-resume-gh-pages/resume.html" target="_blank">Resume </a></li>
-        <li><a href="./contact.html" target="_blank">Contact </a></li>
-      </div>
-      
-     
-     
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-      
-      <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
       }
-      
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
+
+      .sidenav a {
+        font-size: 18px;
       }
-      </script>
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #fcf9f9;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 6.9s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
+      }
+    }
+  </style>
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <li><a href="./index.html" target="_blank">About</a></li>
+
+    <li><a href="./startbootstrap-resume-gh-pages/resume.html" target="_blank">Resume </a></li>
+    <li><a href="./contact.html" target="_blank">Contact </a></li>
+  </div>
 
 
 
-    <div class="container">
-      <div class="items contents">
-        <h1 style="text-align: center; color:#ADAFAF">CHECK OUR SERVICES</h1>
-        <hr>
-        <div class="responsive">
-          <div class="row">
-            <div class="col-lg-4 col-12">
-              <div class="card service-cards">
-                <h3>Supply Chain</h3>
-                <p>The Supply Chain Analytics gives an insight on reforming planning and procurement activities along
-                  with
-                  intelligent chartering and dispatching of the material.</p>
-              </div>
-            </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 
-            <div class="col-lg-4 col-12">
-              <div class="card service-cards">
-                <h3>Analytics</h3>
-                <p>AI and machine learning technologies has brought a new revolution in the marketing and sales
-                  industry
-                  majorly because they excel at pattern recognition, enabling sales teams.</p>
-              </div>
-            </div>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
 
-            <div class="col-lg-4 col-12">
-              <div class="card service-cards">
-                <h3>ChatBots</h3>
-                <p>Our SAP Chatbots on Microsoft Teams™ become an extension of your persona to keep you abreast during
-                  the
-                  day-to-day business.</p>
-              </div>
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+
+
+  <div class="container">
+    <div class="items contents">
+      <h1 style="text-align: center; color:#ADAFAF">CHECK OUR SERVICES</h1>
+      <hr>
+      <div class="responsive">
+        <div class="row">
+          <div class="col-lg-4 col-12">
+
+            <style>
+              .service-cards {
+                padding: 5%;
+                margin: 5%;
+                background-color: rgb(226, 226, 226);
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-property: box-shadow;
+                transition-property: box-shadow;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              }
+
+              .service-cards:hover,
+              .service-cards:focus,
+              .service-cards:active {
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+              }
+            </style>
+
+            <div class="card service-cards">
+              <h3>Supply Chain</h3>
+              <p>The Supply Chain Analytics gives an insight on reforming planning and procurement activities along
+                with
+                intelligent chartering and dispatching of the material.</p>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-4 col-12">
-              <div class="card service-cards">
-                <h3>Power BI</h3>
-                <p>Power BI is a collection of software services, apps, and connectors that work together to turn your
-                  unrelated sources of data into coherent, visually immersive, and interactive insights.</p>
-              </div>
-            </div>
 
-            <div class="col-lg-4 col-12">
-              <div class="card service-cards">
-                <h3>Power Apps</h3>
-                <p>PowerApps is a “citizen application development platform” – allowing anyone to build web and mobile
-                  applications without writing code.</p>
-              </div>
+          <div class="col-lg-4 col-12">
+            <div class="card service-cards">
+              <h3>Analytics</h3>
+              <p>AI and machine learning technologies has brought a new revolution in the marketing and sales
+                industry
+                majorly because they excel at pattern recognition, enabling sales teams.</p>
             </div>
+          </div>
 
-            <div class="col-lg-4 col-12">
-              <div class="card service-cards">
-                <h3>Data Bricks</h3>
-                <p>Data and analytics implementations are at the heart of what we do, so teaming with an analytics
-                  platform leader like Databricks is a natural fit for Celebal and for our customers.</p>
-              </div>
+          <div class="col-lg-4 col-12">
+            <div class="card service-cards">
+              <h3>ChatBots</h3>
+              <p>Our SAP Chatbots on Microsoft Teams™ become an extension of your persona to keep you abreast during
+                the
+                day-to-day business.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-12">
+            <div class="card service-cards">
+              <h3>Power BI</h3>
+              <p>Power BI is a collection of software services, apps, and connectors that work together to turn your
+                unrelated sources of data into coherent, visually immersive, and interactive insights.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12">
+            <div class="card service-cards">
+              <h3>Power Apps</h3>
+              <p>PowerApps is a “citizen application development platform” – allowing anyone to build web and mobile
+                applications without writing code.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-12">
+            <div class="card service-cards">
+              <h3>Data Bricks</h3>
+              <p>Data and analytics implementations are at the heart of what we do, so teaming with an analytics
+                platform leader like Databricks is a natural fit for Celebal and for our customers.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="slideshow-container">
+  <div class="slideshow-container">
 
-        <div class="mySlides fade">
-          
-          <img src="Images\an-overview-of-supply-chain-management.jpg" style="width:100%">
-          <div class="text">Supply Chain</div>
-        </div>
-        
-        <div class="mySlides fade">
-          
-          <img src="Images\0_dtiuqS8kNB66Mp5P.png" style="width:100%">
-          <div class="text">Analytics</div>
-        </div>
-        
-        <div class="mySlides fade">
-          
-          <img src="Images\automatedsecurity_0.png" style="width:100%">
-          <div class="text">ChatBots</div>
-        </div>
+    <div class="mySlides">
 
-        <div class="mySlides fade">
-            
-            <img src="Images\5224d563-e381-4a09-86fa-969ed0de70b6.jpg" style="width:100%">
-            <div class="text">Power BI</div>
-          </div>
+      <img src="Images\an-overview-of-supply-chain-management.jpg" style="width:100%">
+      <div class="text">Supply Chain</div>
+    </div>
 
-          <div class="mySlides fade">
-            
-            <img src="Images\images.png" style="width:100%">
-            <div class="text">Power Apps</div>
-          </div>
+    <div class="mySlides">
 
-          <div class="mySlides fade">
-            
-            <img src="Images\databricks-logo-email.png" style="width:100%">
-            <div class="text">Data Bricks</div>
-          </div>
+      <img src="Images\0_dtiuqS8kNB66Mp5P.png" style="width:100%">
+      <div class="text">Analytics</div>
+    </div>
 
-        
-        <a class="prev" onclick="plusSlides(-10)">&#10094;</a>
-        <a class="next" onclick="plusSlides(10)">&#10095;</a>
-        
-        </div>
-        <br>
-        
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-          <span class="dot" onclick="currentSlide(5)"></span>
-          <span class="dot" onclick="currentSlide(6)"></span> 
-        </div>
-        
-        <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-        </script>
-        
-        
+    <div class="mySlides">
 
-<div class="footer">
+      <img src="Images\automatedsecurity_0.png" style="width:100%">
+      <div class="text">ChatBots</div>
+    </div>
+
+    <div class="mySlides">
+
+      <img src="Images\5224d563-e381-4a09-86fa-969ed0de70b6.jpg" style="width:100%">
+      <div class="text">Power BI</div>
+    </div>
+
+    <div class="mySlides">
+
+      <img src="Images\images.png" style="width:100%">
+      <div class="text">Power Apps</div>
+    </div>
+
+    <div class="mySlides">
+
+      <img src="Images\databricks-logo-email.png" style="width:100%">
+      <div class="text">Data Bricks</div>
+    </div>
+
+
+    <a class="prev" onclick="plusSlides(-10)">&#10094;</a>
+    <a class="next" onclick="plusSlides(10)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+
+
+  <div class="footer">
     <p>
     <footer class="items">
       <p>&copy; Copyright Celebal Technologies Pvt.Ltd.. All Rights Reserved / Terms & Conditions </p>
@@ -340,4 +401,4 @@ img {vertical-align: middle;}
       </p>
   </div>
 
-<body>
+  <body>
